@@ -27,7 +27,7 @@ int fast_fib(int1024_t n) {
 }
 
 int main() {
-    fast_fib(1000);
+    fast_fib(80);
 
     return 0;
 }
