@@ -16,7 +16,6 @@ int fast_fib(int1024_t n) {
 
         count += 1;
 
-        /* printf("fib(%lu) = %lu %s\n", count, a, " "); */
         cout << "fib(" << count << ") = " << a << endl;
     }
 
