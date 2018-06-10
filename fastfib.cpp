@@ -27,9 +27,6 @@ int fast_fib(int1024_t n) {
 }
 
 int main() {
-    // Just don't rely on fast_fib to accurately count
-    // until 1000, I haven't figured out how to store
-    // larger numbers in C++ yet.
     fast_fib(1000);
 
     return 0;
