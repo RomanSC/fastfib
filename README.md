@@ -1,29 +1,30 @@
 # fastfib
+
 My fasted Fibonacci program yet! :D
+
+Now with infinite number storage thanks to the gmp BigNum library.
 
 ```
 #include<iostream>
-#include<boost/multiprecision/cpp_int.hpp>
+#include<gmpxx.h>
 using namespace std;
-using boost::multiprecision::int1024_t;
 
-int fast_fib(int1024_t n) {
-    int1024_t count = 0;
-    int1024_t a = 0;
-    int1024_t b = 1;
-    int1024_t c;
+int fast_fib(mpz_class n = 1'000'000'000) {
+    mpz_class iterCount = 0;
+    mpz_class a = 0;
+    mpz_class b = 1;
+    mpz_class c;
 
-    while (count < n) {
+    while (iterCount < n) {
         c = a + b;
         a = b;
         b = c;
+        ++iterCount;
 
-        count += 1;
-
-        cout << "fib(" << count << ") = " << a << endl;
+        cout << "fib(" << iterCount << ") = " << a << endl;
     }
 
-    if (count == n) {
+    if (iterCount == n) {
         return 0;
     } else {
         return -1;
@@ -31,7 +32,7 @@ int fast_fib(int1024_t n) {
 }
 
 int main() {
-    fast_fib(1000);
+    fast_fib();
 
     return 0;
 }
